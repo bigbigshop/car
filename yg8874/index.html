@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" href="../icon.png" type="image/png">
+  <title>臨時停車</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="../index.css">
+  <style>
+	
+  </style>
+  <script>
+	var areaCode = '852';
+	var telNumber_part1 = '9123';
+	var telNumber_part2 = '1441';
+	var plate1_line = "yg8874";
+	var plate2_line = "";
+	var ImgSrc = 'https://i.pinimg.com/originals/23/69/e3/2369e3e1812a01cf821b1b0d0f2b6a7a.gif';
+
+	
+	window.onload = function() {
+		document.getElementById('myCar').src = ImgSrc;
+		document.getElementById('myCar').alt = plate;
+		document.getElementById('plate').innerText = plate1_line +"\n"+ plate2_line;
+		
+		fetch('http://ip-api.com/json/?fields=status,message,country')
+		  .then(response => response.json())
+		  .then(data => {
+			const country = data.country;
+			if (country === 'China') {
+			  console.log(country);
+			  areaCode = '86';
+			  telNumber_part1 = '1324984';
+			  telNumber_part2 = '3070';
+			  document.getElementById('myPhoneNumber').href = "tel:+" + areaCode + telNumber_part1+telNumber_part2;
+			}else{
+				document.getElementById('myPhoneNumber').href = "tel:+" + areaCode + telNumber_part1+telNumber_part2;
+			}
+		  })
+		  .catch(error => {
+			console.error('Error:', error);
+		  });
+	}
+	
+    function sendWhatsAppMessage() {
+      var message = "你好，你阻住咗我，請你郁一郁車";
+      var encodedMessage = encodeURIComponent(message);
+      var whatsappURL = "https://wa.me/+"+areaCode+telNumber_part1+telNumber_part2+"?text=" + encodedMessage;
+      window.open(whatsappURL, "_blank");
+    }
+	function buying() {
+	  window.open('http://www.google.com', '_blank');
+	}
+  </script>
+</head>
+<body>
+
+  <div class="container">
+    <h1 class="header">QR CODE卡片<br><img id="icon" src="../icon.png" alt="icon"> 臨時停車</h1>
+	<span class="styled-plate" id="plate"></span>
+    <div class="button-container">
+      <div>
+        <a class="button" href="#" id="myPhoneNumber"><i class="fas fa-phone"></i> 立即致電車主</a>
+      </div>
+      <div>
+        <a class="button" href="javascript:void(0);" onclick="sendWhatsAppMessage();"><i class="fab fa-whatsapp"></i> 立即WhatsApp車主</a>
+      </div>
+    </div>    
+  </div>
+  <img id="myCar" class="image-container" src="" alt="Car">
+  
+  <div class="footer">
+	<div class="footer_container">
+	<span>如欲購買，請按</span>
+	<div onclick="buying();" class="floating-button"></div>
+	</div>
+  </div>
+</body>
+</html>
