@@ -4,64 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow" />
-  <link rel="icon" href="../icon.png" type="image/png">
-  <title>臨時停車</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="../index.css">
-  <script src="data.js"></script>
+  <title>Temp</title>
   <script>
-	var ImgSrc = '../sorry.gif';
-	
 	window.onload = function() {
-		document.getElementById('myCar').src = ImgSrc;
-		document.getElementById('myCar').alt = plate;
-		document.getElementById('plate').innerText = plate1_line +"\n"+ plate2_line;
-		
-		const url = 'https://freeipapi.com/api/json/'; 
-
-		$.get(url, function (data) {
-			console.log(data.countryName);
-			if (data.countryName === 'China') {
-			  document.getElementById('myPhoneNumber').href = "tel:+" + areaCode_CN + telNumber_part1_CN+telNumber_part2_CN;
-			}else{
-				document.getElementById('myPhoneNumber').href = "tel:+" + areaCode + telNumber_part1+telNumber_part2;
-			}
-		});
-	}
-	
-    function sendWhatsAppMessage() {
-      var message = "你好，你阻住咗我，請你郁一郁車";
-      var encodedMessage = encodeURIComponent(message);
-      var whatsappURL = "https://wa.me/+"+areaCode+telNumber_part1+telNumber_part2+"?text=" + encodedMessage;
-      window.open(whatsappURL, "_blank");
-    }
-	function buying() {
-	  window.open('http://www.google.com', '_blank');
+		window.location.href = "http://www.google.com";
 	}
   </script>
 </head>
 <body>
-
-  <div class="container">
-    <h1 class="header">QR CODE卡片<br><img id="icon" src="../icon.png" alt="icon"> 臨時停車</h1>
-	<span class="styled-plate" id="plate"></span>
-    <div class="button-container">
-      <div>
-        <a class="button" href="#" id="myPhoneNumber"><i class="fas fa-phone"></i> 立即致電車主</a>
-      </div>
-      <div>
-        <a class="button" href="javascript:void(0);" onclick="sendWhatsAppMessage();"><i class="fab fa-whatsapp"></i> 立即WhatsApp車主</a>
-      </div>
-    </div>    
-  </div>
-  <img id="myCar" class="image-container" src="" alt="Car">
-  
-  <div class="footer">
-	<div class="footer_container">
-	<span>如欲購買，請按</span>
-	<div onclick="buying();" class="floating-button"></div>
-	</div>
-  </div>
 </body>
 </html>
