@@ -27,6 +27,11 @@ window.onload = function() {
 		document.querySelector("#sendMessage").setAttribute("onclick", "sendWhatsAppMessage()"); 		
 	  }
 	}).fail(function() {
-	  console.log('Failed to retrieve URL');
+	 console.log('Failed to retrieve URL');
+		document.getElementById('myPhoneNumber').innerHTML = '<i class="fas fa-phone"></i> 立即致电车主(国内)';
+		document.getElementById('myPhoneNumber').href = "tel:+" + areaCode_CN + telNumber_part1_CN + telNumber_part2_CN;
+		document.getElementById('sendMessage').innerHTML = '<i class="fa-regular fa-message"></i> 发送信息';
+		var smsUrl = 'sms:' + telNumber_part1_CN + telNumber_part2_CN + '?body=' + encodeURIComponent('你好，请挪车');
+		document.querySelector("#sendMessage").setAttribute("href", smsUrl);
 	});
 }
