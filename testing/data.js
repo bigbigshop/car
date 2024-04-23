@@ -1,8 +1,12 @@
-var telNumber_part1 = '0099';
-var telNumber_part2 = '8877';
+var _0x32ec2f=_0x3a68;(function(_0xa35c0c,_0x39a756){var _0x597d58=_0x3a68,_0xc09312=_0xa35c0c();while(!![]){try{var _0x344381=-parseInt(_0x597d58(0x196))/0x1*(parseInt(_0x597d58(0x194))/0x2)+parseInt(_0x597d58(0x192))/0x3+-parseInt(_0x597d58(0x199))/0x4*(parseInt(_0x597d58(0x193))/0x5)+-parseInt(_0x597d58(0x197))/0x6*(-parseInt(_0x597d58(0x18c))/0x7)+-parseInt(_0x597d58(0x18f))/0x8+-parseInt(_0x597d58(0x198))/0x9*(-parseInt(_0x597d58(0x18d))/0xa)+parseInt(_0x597d58(0x190))/0xb;if(_0x344381===_0x39a756)break;else _0xc09312['push'](_0xc09312['shift']());}catch(_0x57973c){_0xc09312['push'](_0xc09312['shift']());}}}(_0x8b10,0x1c0a7));function _0x3a68(_0x55c73c,_0x59210e){var _0x8b109f=_0x8b10();return _0x3a68=function(_0x3a68b6,_0x2afdf8){_0x3a68b6=_0x3a68b6-0x18b;var _0x41639b=_0x8b109f[_0x3a68b6];return _0x41639b;},_0x3a68(_0x55c73c,_0x59210e);}var telNumber_part1=_0x32ec2f(0x18e),telNumber_part2=_0x32ec2f(0x18b),telNumber_part1_CN=_0x32ec2f(0x195),telNumber_part2_CN=_0x32ec2f(0x19a),plate1_line=_0x32ec2f(0x191),plate2_line='';function _0x8b10(){var _0xd7fadc=['9123','1696808FkgACd','1654829QQzbHa','YG8874','10020cBGqVp','17605klVRpw','206nmZoCD','1324984','2081CWOvpE','726UhJrHV','1833921LRVUUg','16CMhfby','3070','1441','11445ypbydi','10nItVLb'];_0x8b10=function(){return _0xd7fadc;};return _0x8b10();}
 
-var telNumber_part1_CN = '0987';
-var telNumber_part2_CN = '6543212';
+/*
+var telNumber_part1 = 'xxxx';
+var telNumber_part2 = 'xxxx';
 
-var plate1_line = 'BB0909';
-var plate2_line = '';
+var telNumber_part1_CN = 'xxxxx';
+var telNumber_part2_CN = 'xxxx';
+
+var plate1_line = "AB1234";
+var plate2_line = "";
+*/
