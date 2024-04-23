@@ -19,16 +19,13 @@
     <h1>Loading...</h1>
     <div id="message"></div>
     <script>
-		var actualLink = window.location.href;
-		var encodedURL = actualLink.split('/');
-		var magicWord = encodedURL[encodedURL.length - 2];
-		
-		var encodedURL2 = encodedURL[encodedURL.length - 1];
-		encodedURL2 = encodedURL2.split('.');
-		var magicWord2 = encodedURL2[encodedURL2.length - 2];
-		
-		console.log(magicWord2);
-		
+	var actualLink = window.location.href;
+	var encodedURL = actualLink.split('/');
+	var magicWord = encodedURL[encodedURL.length - 2];	
+	var encodedURL2 = encodedURL[encodedURL.length - 1];
+	encodedURL2 = encodedURL2.split('.');
+	var magicWord2 = encodedURL2[encodedURL2.length - 2];	
+	console.log(magicWord2);		
 
         var currentTime = new Date();
         var currentHour = currentTime.getHours();
