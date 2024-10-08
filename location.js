@@ -9,12 +9,12 @@ window.onload = function() {
 	url = 'https://api.vvhan.com/api/ipinfo'; 
 	//data.info.prov
 	
-	//url = 'https://ipapi.co/json/';
+	url = 'https://ipapi.co/json/';
 	//data.country
 
 	$.get(url, function(data) {
 	  console.log(data);
-	  if (data.info.country == '中国' &&  data.info.prov != '香港' ) {
+	  if (data.country == 'CN' &&  data.country != 'HK' ) {
 		document.getElementById('myPhoneNumber').innerHTML = '<i class="fas fa-phone"></i> 立即致电车主(国内)';
 		document.getElementById('myPhoneNumber').href = "tel:+" + areaCode_CN + telNumber_part1_CN + telNumber_part2_CN;
 		document.getElementById('sendMessage').innerHTML = '<i class="fa-regular fa-message"></i> 发送信息';
