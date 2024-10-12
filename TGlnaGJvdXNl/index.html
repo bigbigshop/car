@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" href="../icon.png" type="image/png">
+  <title>臨時停車</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../index.css">  
+  <script src="data.js"></script>
+  <script src="../location.js"></script>
+  <script>
+	var areaCode = '852';
+	var areaCode_CN = '86';
+	var ImgSrc = 'sorry.gif';	
+	
+    function sendWhatsAppMessage() {
+      var message = "你好，你阻住咗我，請你郁一郁車";
+      var encodedMessage = encodeURIComponent(message);
+      var whatsappURL = "https://wa.me/+"+areaCode+telNumber_part1+telNumber_part2+"?text=" + encodedMessage;
+      window.open(whatsappURL, "_blank");
+    }
+	function buying() {
+	  window.open('https://carousell.app.link/Tby3vC4ekIb', '_blank');
+	}
+  </script>
+</head>
+<body>
+
+  <div class="container">
+    <h1 class="header">QR CODE卡片<br><img id="icon" src="../icon.png" alt="icon"> 臨時停車</h1>
+	<span class="styled-plate" id="plate">載入中...</span>
+    <div class="button-container">
+      <div>
+        <a class="button" href="#" id="myPhoneNumber">載入中...</a>
+      </div>
+      <div>
+        <a class="button" href="javascript:void(0);" id="sendMessage">載入中...</a>
+      </div>
+    </div>    
+  </div>
+  <img id="myCar" class="image-container" src="" alt="Car">
+  
+  <div class="footer">
+	<div class="footer_container">
+	<span>如欲購買，請按</span>
+	<div onclick="buying();" class="floating-button"></div>
+	</div>
+  </div>
+</body>
+</html>
