@@ -12,6 +12,20 @@
   <script src="data.js"></script>
   <script src="../location.js"></script>
   <script>
+	  function checkForDataJs() {
+	    const script = document.createElement('script');
+	    script.src = 'data.js';
+	    script.onload = function() {
+	        console.log('data.js is loaded.');
+	    };
+	    script.onerror = function() {
+	        console.log('data.js not found.');
+	        alert("請使用秘密鏈結更新資料。")
+	    };
+	    document.head.appendChild(script);
+	  }
+
+  checkForDataJs();
 	var areaCode = '852';
 	var areaCode_CN = '86';
 	var ImgSrc = 'sorry.gif';	
