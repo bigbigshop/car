@@ -24,6 +24,8 @@
 	  }
 
   //checkForDataJs();
+  
+  function preload() {
 	var areaCode = '852';
 	var areaCode_CN = '86';
 	var ImgSrc = 'sorry.gif';	
@@ -36,7 +38,7 @@
   document.getElementById('sendMessage').innerHTML = '<i class="fa-regular fa-message"></i> 发送信息';
   var smsUrl = 'sms:' + telNumber_part1_CN + telNumber_part2_CN + '?body=' + encodeURIComponent('你好，请挪车');
   document.querySelector("#sendMessage").setAttribute("href", smsUrl);
-	
+	}
     function sendWhatsAppMessage() {
       var message = "你好，你阻住咗我，請你郁一郁車";
       var encodedMessage = encodeURIComponent(message);
@@ -46,6 +48,7 @@
 	function buying() {
 	  window.open('https://carousell.app.link/Tby3vC4ekIb', '_blank');
 	}
+  preload();
   </script>
 </head>
 <body>
