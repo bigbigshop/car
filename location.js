@@ -10,7 +10,7 @@ window.onload = function() {
         timeout: 5000, // Timeout set to 5000 milliseconds (5 seconds)
         success: function(data) {
             console.log(data);
-            if (data.country == 'CN') {
+            if (data.country == 'CN' || big6Mode == '1') {
                 document.getElementById('myPhoneNumber').innerHTML = '<i class="fas fa-phone"></i> 立即致电车主(国内)';
                 document.getElementById('myPhoneNumber').href = "tel:+" + areaCode_CN + telNumber_part1_CN + telNumber_part2_CN;
                 document.getElementById('sendMessage').innerHTML = '<i class="fa-regular fa-message"></i> 发送信息';
