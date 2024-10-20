@@ -22,9 +22,7 @@
 	var actualLink = window.location.href;
 	var encodedURL = actualLink.split('/');
 	var magicWord = encodedURL[encodedURL.length - 3];	
-	var encodedURL2 = encodedURL[encodedURL.length - 2];
-	encodedURL2 = encodedURL2.split('.');
-	var magicWord2 = encodedURL2[encodedURL2.length - 1];
+	var magicWord2 = encodedURL[encodedURL.length - 2];	
 	console.log(magicWord);
 	console.log(magicWord2);		
 
@@ -37,7 +35,7 @@
             document.getElementById("message").innerHTML = "暫時未能更新資料，請於8:30a.m.後再試";
         } else {
             //console.log("Hello sun");
-	    window.location.href = "http://ykyle.eu/carpark/"+ magicWord + "/"+ magicWord2;
+			window.location.href = "http://ykyle.eu/carpark/"+ magicWord + "/"+ magicWord2;
         }
     </script>
 </body>
