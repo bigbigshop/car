@@ -28,9 +28,9 @@ window.onload = function() {
 			}
 		});
 	}else{
-		if (region == 'big6' || big6Mode == '1'){
+		if (region == 'big6'){
 			displayCN();			
-		}else if ( region == 'hk'){
+		}else if (region == 'hk'){
 			displayHK();
 		}
 	}
