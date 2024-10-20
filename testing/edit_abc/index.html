@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>臨時停車資料修改</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 200px;
+        }
+        #message {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Loading...</h1>
+    <div id="message"></div>
+    <script>
+	var actualLink = window.location.href;
+	var encodedURL = actualLink.split('/');
+	var magicWord = encodedURL[encodedURL.length - 3];	
+	var encodedURL2 = encodedURL[encodedURL.length - 2];
+	encodedURL2 = encodedURL2.split('.');
+	var magicWord2 = encodedURL2[encodedURL2.length - 1];
+	console.log(magicWord);
+	console.log(magicWord2);		
+
+        var currentTime = new Date();
+        var currentHour = currentTime.getHours();
+        var currentMinute = currentTime.getMinutes();
+
+        if (currentHour >= 1 && currentHour < 8 || (currentHour === 8 && currentMinute <= 30)) {
+           // console.log("Goodnight");
+            document.getElementById("message").innerHTML = "暫時未能更新資料，請於8:30a.m.後再試";
+        } else {
+            //console.log("Hello sun");
+			window.location.href = "http://ykyle.eu/carpark/"+ magicWord + "/"+ magicWord2;
+        }
+    </script>
+</body>
+</html>
